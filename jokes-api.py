@@ -10,19 +10,19 @@ def get_jokes():
         if data['success'] and 'data' in data:
             jokes = data['data']['data']
             
-            # print(jokes)
-            result = []
-            for joke in jokes:
-                categories = joke['categories']
-                content = joke['content']
-                result.append((categories, content))
+            print(jokes)
+            # result = []
+            # for joke in jokes:
+            #     categories = joke['categories']
+            #     content = joke['content']
+            #     result.append((categories, content))
                 
-                cate = joke.get('categories')
-                con = joke.get('content')
-                result.append((cate, con))
+            #     cate = joke.get('categories')
+            #     con = joke.get('content')
+            #     result.append((cate, con))
             
                 
-            return result
+            # return result
         else:
             raise Exception("Failed to get responce from url.")
                 
